@@ -1,10 +1,10 @@
 class Hash
-  def keys_of(arguments)
-    result = []
-    *arguments.collect do |animals_key, animal_data|
-        animal_data.collect do |animals, country|
-          if arg == country 
-            result << animals
+  def keys_of(*arguments)
+  result = []
+    arguments.collect do |el|
+        el.collect do |key,value|
+          if el == value 
+            result << key
           end 
       end 
     end
